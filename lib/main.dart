@@ -13,23 +13,23 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+        debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
-        
         home: DefaultTabController(
           length: 2,
           child: Scaffold(
             appBar: AppBar(
               centerTitle: true,
-              title: Text("Motion Lab Challange 3",
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.w600,
-                fontFamily: GoogleFonts.poppins().fontFamily,
-              ),),
+              title: Text(
+                "Motion Lab Challange 3",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                  fontFamily: GoogleFonts.poppins().fontFamily,
+                ),
+              ),
               backgroundColor: Color(0xFFffa500),
               bottom: const TabBar(
-                
                 labelColor: Colors.white,
                 indicatorSize: TabBarIndicatorSize.label,
                 indicator: BoxDecoration(
@@ -87,10 +87,10 @@ class MyApp extends StatelessWidget {
                                     Text(
                                       "Nama Lab: Mobile innovation Laboratory",
                                       style: TextStyle(
-                                        fontSize: 15,
+                                        fontSize: 14,
                                         fontWeight: FontWeight.w500,
                                         fontFamily:
-                                            GoogleFonts.poppins().fontFamily,
+                                            GoogleFonts.inter().fontFamily,
                                       ),
                                     ),
                                     SizedBox(
@@ -99,9 +99,10 @@ class MyApp extends StatelessWidget {
                                     Text(
                                       "Alamat: TULT-0624 Informatics Faculty, telkom university",
                                       style: TextStyle(
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w500,
-                                      ),
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w500,
+                                          fontFamily:
+                                              GoogleFonts.inter().fontFamily),
                                     ),
                                   ],
                                 ),
@@ -131,6 +132,35 @@ class MyApp extends StatelessWidget {
                                     GoogleFonts.ptSansCaption().fontFamily,
                               ),
                             )),
+                        SizedBox(
+                          height: 24,
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(
+                              left: 24, top: 24, right: 100, bottom: 24),
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: Colors.black,
+                              width: 1,
+                            ),
+                          ),
+                          child: Text(
+                            "Divisi yang ada pada motion lab: \n1. Mobile Programming \n2. Bussiness analyst \n3. UI/UX",
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              fontFamily:
+                                  GoogleFonts.ptSansCaption().fontFamily,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 24,
+                        ),
+                        SizedBox(
+                          height: 24,
+                        ),
                       ]),
                 ),
                 Padding(
@@ -148,7 +178,8 @@ class MyApp extends StatelessWidget {
                                 boxShadow: [
                                   BoxShadow(
                                       blurRadius: 10,
-                                      color: Color(0xFFffa500).withOpacity(0.45))
+                                      color:
+                                          Color(0xFFffa500).withOpacity(0.45))
                                 ],
                               ),
                               child: CircleAvatar(
@@ -244,7 +275,7 @@ class MyApp extends StatelessWidget {
                               ),
                             ),
                             child: Text(
-                              "Saya sudah pernah mempelajari tentang widget-widget pada flutter seperti wor, column, expanded, container, dan lain-lain",
+                              "Saya sudah pernah mempelajari tentang widget-widget pada flutter seperti row, column, expanded, container, dan lain-lain",
                               textAlign: TextAlign.start,
                               style: TextStyle(
                                 fontSize: 14,
