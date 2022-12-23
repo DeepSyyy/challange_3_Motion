@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lottie/lottie.dart';
 import 'package:shimmer/shimmer.dart';
 
 void main() {
@@ -53,115 +54,208 @@ class MyApp extends StatelessWidget {
             body: TabBarView(
               children: <Widget>[
                 Padding(
-                  padding: const EdgeInsets.all(24),
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                  padding: const EdgeInsets.only(left: 30, right: 30, top: 24),
+                  child: Column(children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        boxShadow: [
+                          BoxShadow(
+                              blurRadius: 10,
+                              color: Color(0xFFffa500).withOpacity(0.45))
+                        ],
+                      ),
+                      child: CircleAvatar(
+                        radius: 70,
+                        backgroundImage: AssetImage(
+                          "assets/images/prodile_lab.jpg",
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      child: Text(
+                        "Motion Lab",
+                        style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.w300,
+                          fontFamily: GoogleFonts.poppins().fontFamily,
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.location_on,
+                            color: Colors.black,
+                          ),
+                          Text(
+                            "TULT Lantai 6 Ruangan 24",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w400,
+                              fontFamily: GoogleFonts.poppins().fontFamily,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 24,
+                    ),
+                    Container(
+                      child: Row(
+                        children: [
+                          Text(
+                            "Tentang",
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w400,
+                              fontFamily: GoogleFonts.beVietnamPro().fontFamily,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Container(
+                      child: Text(
+                        "Motion Lab merupakan salah satu laboratorium yang ada di Fakultas Informatika Universitas Telkom. Motion Lab berada di lantai 6 gedung TULT. Motion bergerak pada research bidang mobile",
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          fontFamily: GoogleFonts.beVietnamPro().fontFamily,
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Container(
+                      child: Row(
+                        children: [
+                          Text(
+                            "Divisi Pada Motion lab",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w400,
+                              fontFamily: GoogleFonts.beVietnamPro().fontFamily,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 14,
+                    ),
+                    Row(
                       children: [
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                color: Colors.grey[300],
-                                shape: BoxShape.circle,
-                                boxShadow: [
-                                  BoxShadow(
-                                      blurRadius: 10,
-                                      color:
-                                          Color(0xFFffa500).withOpacity(0.45))
-                                ],
-                              ),
-                              child: CircleAvatar(
-                                radius: 50,
-                                backgroundImage: AssetImage(
-                                  "assets/images/prodile_lab.jpg",
-                                ),
-                              ),
-                            ),
-                            Expanded(
-                              child: Container(
-                                padding: EdgeInsets.only(left: 20),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "Nama Lab: Mobile innovation Laboratory",
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w500,
-                                        fontFamily:
-                                            GoogleFonts.inter().fontFamily,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 8,
-                                    ),
-                                    Text(
-                                      "Alamat: TULT-0624 Informatics Faculty, telkom university",
-                                      style: TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w500,
-                                          fontFamily:
-                                              GoogleFonts.inter().fontFamily),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 24,
-                        ),
                         Container(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: 24, vertical: 24),
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                color: Colors.black,
-                                width: 1,
-                              ),
-                            ),
-                            child: Text(
-                              "Mobile Innovation Laboratory atau yang biasa dikenal dengan nama Motion Lab, Lab ini berada pada TULT lantai 6 ruangan 24",
-                              textAlign: TextAlign.start,
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                                fontFamily:
-                                    GoogleFonts.ptSansCaption().fontFamily,
-                              ),
-                            )),
-                        SizedBox(
-                          height: 24,
-                        ),
-                        Container(
-                          padding: EdgeInsets.only(
-                              left: 24, top: 24, right: 100, bottom: 24),
+                          alignment: Alignment.center,
+                          padding: EdgeInsets.all(8),
+                          width: 200,
                           decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
                             border: Border.all(
                               color: Colors.black,
                               width: 1,
                             ),
                           ),
                           child: Text(
-                            "Divisi yang ada pada motion lab: \n1. Mobile Programming \n2. Bussiness analyst \n3. UI/UX",
-                            textAlign: TextAlign.start,
+                            "Mobile Programming",
                             style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.w400,
-                              fontFamily:
-                                  GoogleFonts.ptSansCaption().fontFamily,
+                              fontFamily: GoogleFonts.beVietnamPro().fontFamily,
                             ),
                           ),
                         ),
-                        SizedBox(
-                          height: 24,
+                        Spacer(),
+                        Lottie.asset(
+                          "assets/lottie/mobile_prog.json",
+                          width: 50,
+                          height: 50,
                         ),
-                        SizedBox(
-                          height: 24,
+                      ],
+                    ),
+                    SizedBox(
+                      height: 14,
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          alignment: Alignment.center,
+                          padding: EdgeInsets.all(8),
+                          width: 200,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(
+                              color: Colors.black,
+                              width: 1,
+                            ),
+                          ),
+                          child: Text(
+                            "UI/UX",
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              fontFamily: GoogleFonts.beVietnamPro().fontFamily,
+                            ),
+                          ),
                         ),
-                      ]),
+                        Spacer(),
+                        Lottie.asset(
+                          "assets/lottie/ui_ux.json",
+                          width: 50,
+                          height: 50,
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 14,
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          alignment: Alignment.center,
+                          padding: EdgeInsets.all(8),
+                          width: 200,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(
+                              color: Colors.black,
+                              width: 1,
+                            ),
+                          ),
+                          child: Text(
+                            "Bussiness Analyst",
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              fontFamily: GoogleFonts.beVietnamPro().fontFamily,
+                            ),
+                          ),
+                        ),
+                        Spacer(),
+                        Lottie.asset(
+                          "assets/lottie/business_a.json",
+                          width: 50,
+                          height: 50,
+                        ),
+                      ],
+                    ),
+                  ]),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(24),
